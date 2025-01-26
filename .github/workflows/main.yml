@@ -1,0 +1,17 @@
+name: dispatch_action
+
+on:
+ push:
+   branches:
+     - master
+
+jobs:
+ dispatch:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Trigger repository dispatch
+       uses: peter-evans/repository-dispatch@v1
+       with:
+         token: ${Gghp_zpGGvACuxvLv6R1nODp21ysqmBoWXm0T7b}
+         repository: learner-nosilv/PROGRAMMERS-BADGE
+         event-type: trigger-workflow
