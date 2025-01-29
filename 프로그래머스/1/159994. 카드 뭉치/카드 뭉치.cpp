@@ -4,6 +4,7 @@
 using namespace std;
 
 string solution(vector<string> cards1, vector<string> cards2, vector<string> goal) {
+    // FIFO 특성을 가진 QUEUE 자료구조를 사용하는 것이 가장 적절하다고 보아 굳이 QUEUE로 바꿈
     queue<string> cards1Q;
     queue<string> cards2Q;
     queue<string> goalQ;
@@ -37,7 +38,5 @@ string solution(vector<string> cards1, vector<string> cards2, vector<string> goa
             return "No";
         }
     }
-    if(goalQ.empty()){
-            return "Yes";
-    }
+    return "Yes";
 }
