@@ -1,7 +1,6 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-#include <iostream>
 
 using namespace std;
 
@@ -26,7 +25,6 @@ vector<int> solution(vector<int> lottos, vector<int> win_nums) {
         else if(lottos[l]<win_nums[w]) w++;
         else l++;
     }
-    cout << empty << ':' << match << endl;
     
     vector<int> answer;
     answer.push_back( (empty+match>1 ? 7-(empty+match) : 6) );  // 최고등수
