@@ -1,7 +1,5 @@
 #include <string>
 #include <vector>
-#include <iostream>
-
 using namespace std;
 
 int solution(string s) {
@@ -25,9 +23,6 @@ int solution(string s) {
         i++;
     }
     if(s!="") divided.push_back(s);
-   
-    for(auto i : divided){
-        cout << i << ", ";
-    }
+
     return divided.size();
 }
