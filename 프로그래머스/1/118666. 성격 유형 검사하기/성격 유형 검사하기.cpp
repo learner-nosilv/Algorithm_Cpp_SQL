@@ -1,6 +1,5 @@
 #include <string>
 #include <vector>
-#include <iostream>
 
 using namespace std;
 
@@ -25,7 +24,6 @@ string solution(vector<string> survey, vector<int> choices) {
         if (score > 0) indicator[plus/2][plus%2] += score;
         else if (score < 0) indicator[minus/2][minus%2] -= score;
     }
-    for(int* i : indicator) cout << "{" << i[0] << ", "<< i[1]<< "}";
     
     // 결과 생성 및 출력
     string answer = "";
