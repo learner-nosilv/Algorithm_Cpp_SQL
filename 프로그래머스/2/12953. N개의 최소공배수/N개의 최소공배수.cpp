@@ -1,8 +1,5 @@
-#include <string>
 #include <vector>
 #include <unordered_map>
-#include <cmath>
-#include <algorithm>
 
 using namespace std;
 // 최소공배수 = 곱 / 최대공약수
