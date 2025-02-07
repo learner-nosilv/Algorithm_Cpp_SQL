@@ -49,3 +49,21 @@ int solution(vector<int> arr) {
     }
     return answer;
 }
+
+
+
+// 유클리드호제법 + 재귀를 사용한 방법이 더 속도가 빨랐다. (2ms -> 1ms)
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int gcd(int x, int y) { return x % y == 0 ? y : gcd(y, x % y); }
+int lcm(int x, int y) { return x * y / gcd(x, y); }
+int solution(vector<int> arr) {
+    int answer = arr[0];
+    for (int i = 1; i < arr.size(); i++)
+        answer = lcm(answer, arr[i]);
+    return answer;
+}
