@@ -1,6 +1,4 @@
-#include <vector>
-using namespace std;
-
+// 점화식 nk = n(k-1) + n(k-2) 사용
 long long solution(int n){
     if(n==1) return 1;
     if(n==2) return 2;
