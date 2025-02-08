@@ -5,6 +5,12 @@
 
 using namespace std;
 
+bool compare(pair<int,int>& a, pair<int,int>& b) {
+    if (a.second == b.second) 
+        return a.first < b.first;
+    return a.second > b.second;
+}
+
 int solution(int k, vector<int> tangerine) {
     // 귤을 크기 별로 갯수 세기 | 맵 { 귤크기 : 갯수 }
     unordered_map<int, int> tangerineMap;
@@ -21,7 +27,7 @@ int solution(int k, vector<int> tangerine) {
     vector<pair<int, int>> tangerineVec(tangerineMap.begin(), tangerineMap.end());
     
     // 갯수(value) 기준 내림차순 정렬
-    sort(tangerineVec.begin(), tangerineVec.end(), [](const auto &a, const auto &b){return a.second > b.second;});
+    sort(tangerineVec.begin(), tangerineVec.end(), compare);
     
     int counter=0;
     for(auto pair :tangerineVec){
