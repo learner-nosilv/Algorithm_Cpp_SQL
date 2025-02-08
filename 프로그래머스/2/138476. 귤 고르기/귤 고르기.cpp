@@ -9,12 +9,12 @@ int solution(int k, vector<int> tangerine) {
     // 귤을 크기 별로 갯수 세기 | 맵 { 귤크기 : 갯수 }
     unordered_map<int, int> tangerineMap;
     for(int tan: tangerine){
-        if(tangerineMap.find(tan)==tangerineMap.end()){
-            tangerineMap[tan]=1;
-        }
-        else{
+        // if(tangerineMap.find(tan)==tangerineMap.end()){
+        //     tangerineMap[tan]=1;
+        // }
+        // else{
             tangerineMap[tan]++;
-        }
+        // }
     }
     
     // 갯수(value) 별로 내림차순 정렬을 하기 위해서 벡터로 변환
