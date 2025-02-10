@@ -7,12 +7,13 @@ int solution(vector<int> elements) {
     unordered_set<int> results;
 
     int size = elements.size();
-    for(int i=0; i<size; i++){  // i = 길이-1
+ 
+    for(int i=0; i<size; i++){  // i = 0 ~ 길이-2
         int sum=0;
-        for(int j=i; j<i+size; j++){
+        for(int j=i; j<i+size-1; j++){
             sum += elements[j%size];
             results.insert(sum);
         }
     }
-    return results.size();
+    return results.size()+1;
 }
